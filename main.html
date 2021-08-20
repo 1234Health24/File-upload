@@ -1,0 +1,23 @@
+<html>
+  <body> <button onclick = "dosomething"></body>
+    <script>
+      function dosomething()
+      {
+const onChange = (event) => {
+  const value = event.target.value;
+
+  // this will return C:\fakepath\somefile.ext
+  console.log(value);
+
+  const files = event.target.files;
+
+  //this will return an ARRAY of File object
+  console.log(files);
+}
+
+return (
+ <input type="file" onChange={onChange} />
+)
+/* Found from Stack Overflow */}
+    </script>
+</html>
