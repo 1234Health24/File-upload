@@ -20,6 +20,7 @@
   }, (error, result) => {
     if (!error && result && result.event === "success") {
       ThunkableWebviewerExtension.postMessage(result.info.url)
+      navigator.clipboard.writeText(result.info.url);
     }
   }
   )
